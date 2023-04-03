@@ -49,7 +49,7 @@ def monitor_and_reply(username, trigger_phrase, replied_ids_file):
         if trigger_phrase in comment.body and comment.author == username:
             query_start = comment.body.find(trigger_phrase) + len(trigger_phrase)
             query = comment.body[query_start:].strip()
-            prompt = f"RADAR-Bot {query}"
+            prompt = f"Trigger Phrase {query}"
             response = ask_chatgpt(prompt)
             comment.reply(response)
 
