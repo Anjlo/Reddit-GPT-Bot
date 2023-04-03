@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 )
 
 # OpenAI API key
-openai.api_key = ""
+openai.api_key = "your OpenAI API key"
 
 def ask_chatgpt(prompt):
     response = openai.Completion.create(
